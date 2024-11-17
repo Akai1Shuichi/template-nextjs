@@ -12,10 +12,7 @@ import { useActionState } from 'react';
 import { authenticate } from '@/app/lib/action';
 
 export default function LoginForm() {
-  const [errorMessage, formAction, isPending] = useActionState(
-    authenticate,
-    undefined
-  );
+  const [errorMessage, formAction] = useActionState(authenticate, undefined);
 
   return (
     <form action={formAction} className="space-y-3">
